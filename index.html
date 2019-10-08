@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Sito fatto male</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+  function clona(){
+    $("#divprincipale").clone().attr("id","divsecondario").appendTo("#contenitore");
+  }
+
+  function remove(){
+    $("#divsecondario").remove();
+  }
+  </script>
+</head>
+<body>
+  <center>
+  <div class="row">
+	<div class="col">
+		<button onclick="clona()"  class="btn btn-outline-primary" style="margin-bottom:50px; margin-left:500px; margin-top:20px;">Aggiungi linea</button>
+	</div>
+	<div class="col">
+		<button onclick="remove()"  class="btn btn-outline-primary" style="margin-bottom:50px; margin-right:500px; margin-top:20px;">Rimuovi  linea</button>
+	</div>
+  </div>
+  <div id="contenitore">
+    <form id="divprincipale">
+      <div>
+      <div class="row">
+      <div class="col">
+        <label for="exampleInputName">Nome</label>
+        <input type="name" class="form-control" id="exampleInputName" placeholder="Inserisci il tuo nome">
+        <small id="NameHelp" class="form-text text-muted">Non lo diremo a nessuno</small>
+      </div>
+      <div class="col">
+        <label for="exampleInputName">Cognome</label>
+        <input type="name" class="form-control" id="exampleInputName" placeholder="Inserisci il tuo cognome">
+        <small id="NameHelp" class="form-text text-muted">Non lo diremo a nessuno</small>
+      </div>
+      <div class="col">
+        <label for="exampleInputName">Data</label>
+        <input type="name" class="form-control" id="exampleInputName" placeholder="Inserisci la tua data di nascita">
+        <small id="NameHelp" class="form-text text-muted">Non la daremo a nessuno</small>
+      </div>
+      </div>
+      </div>
+    </form>
+  </div>
+  </center>
+</body>
+</html>
